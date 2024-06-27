@@ -1,0 +1,18 @@
+<nav>
+    <div class="nav-content">
+        <div class="nav-header">
+            <button onClick="document.querySelector('.nav-buttons').classList.toggle('nav-visible');"></button>
+            {{ partial "logo.html" . }}
+        </div>
+
+        {{ $current := trim .RelPermalink "/" }}
+        {{ with site.Menus.nav }}
+            <div class="nav-buttons nav-visible">
+                {{ range . }}
+                    {{ $target := trim .PageRef "/" }}
+                    <a {{ if eq $current $target }}class="active-nav-button"{{ end }} href="{{ .PageRef }}">{{ .Name | title }}</a>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</nav>

@@ -1,0 +1,9 @@
+{{ define "header" }}
+    {{ partial "back.html" . }}
+    <h1>{{ .Title | title }}</h1>
+    <h2>{{ .Section | title }}{{ if not .Params.hide_date }} - {{ .Date.Format .Site.Params.dateFormat }}{{ end }}</h2>
+{{ end }}
+{{ define "main" }}
+    {{ partial "slideshow.html" . }}
+    {{ partial "contents.html" . }}
+{{ end }}

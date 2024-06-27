@@ -1,0 +1,10 @@
+name = "lab-theme"
+license = "GPL-3.0"
+licenselink = "https://github.com/jadc/lab-theme/LICENSE"
+description = "A theme fit for a research laboratory."
+homepage = "https://github.com/jadc/lab-theme"
+#demosite = "https://owner.github.io/repo"
+
+[author]
+  name = "Jad Chehimi"
+  homepage = "https://jad.red"

@@ -1,0 +1,25 @@
+<footer>
+    <div id="footer-content">
+        <aside id="footer-left">
+            {{ partial "footer-text.html" . }}
+        </aside>
+        {{ $data := site.Menus.footer }}
+        {{ with .Site.Sections }}
+            <aside id="footer-right">
+                <ul>
+                    {{ with $data }}
+                        {{ range . }}
+                        <a href="{{ .PageRef }}"><li style="font-weight: 600">{{ .Name }}</li></a>
+                        {{ end }}
+                    {{ end }}
+                    {{ range . }}
+                        <!-- TODO: fix empty section such that this check isnt needed -->
+                        {{ if gt (len .RelPermalink) 0 }}
+                            <a href="{{ .RelPermalink }}"><li>{{ .Title | title }}</li></a>
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </aside>
+        {{ end }}
+    </div>
+</footer>

@@ -1,0 +1,28 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+
+[params]
+    summaryLength = 20
+    dateFormat = "Jan 2, 2006"
+
+    customCSS = []
+    customJS = []
+
+# Navigation Bar Links
+[[menus.nav]]
+name = "Home"
+pageRef = "/"
+weight = 1
+
+# Footer Links
+[[menus.footer]]
+name = "Intranet"
+pageRef = "/intranet/"
+weight = 1
