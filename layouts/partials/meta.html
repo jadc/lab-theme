@@ -1,0 +1,15 @@
+<link rel="canonical" href="{{ .Site.BaseURL }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta charset="utf-8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+{{ with resources.GetMatch "*.ico" }}
+    <link rel="icon" type="image/png" href="{{ . }}">
+{{ end }}
+
+{{ partialCached "css.html" . }}
+{{ partialCached "js.html" . }}

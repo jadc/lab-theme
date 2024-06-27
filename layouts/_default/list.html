@@ -1,0 +1,25 @@
+{{ define "main" }}
+    {{ partial "contents.html" . }}
+    {{ range .Pages }}
+        <article class="post">
+            {{ with .Resources.ByType "image" }}
+                <aside>
+                    {{ $img := index . 0 }}
+                    <img src="{{ $img.RelPermalink }}" alt="{{ $img.Title }}" />
+                </aside>
+            {{ end }}
+
+            <section>
+                <header>
+                    <h2><a href="{{ .RelPermalink }}">{{ .Title | title }}</a></h2>
+                </header>
+                <div class="post-summary">
+                    {{ .Summary }}
+                </div>
+                <div class="post-footer">
+                    <a href="{{ .RelPermalink }}"><button>Read more...</button></a>
+                </div>
+            </section>
+        </article>
+    {{ end }}
+{{ end }}
