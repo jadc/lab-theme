@@ -341,6 +341,7 @@ nav {
         margin: 1em 0;
     }
     ol, ul {
+        margin: 1em 0;
         padding-left: 3em;
 
         li {
