@@ -69,7 +69,8 @@ main {
     }
 }
 
-h2 {
+/* Header with underline */
+h1 {
     font-size: 200%;
     scroll-margin-top: 3em;
 
@@ -87,8 +88,13 @@ h2 {
 
 /* Header */
 #main-header {
-    h1 {
+    h5 {
         font-size: min(4em, 14vw);
+        font-weight: 700;
+    }
+    h6 {
+        font-size: min(2em, 7vw);
+        font-weight: 500;
     }
     margin-bottom: 2em;
 }
@@ -205,8 +211,9 @@ nav {
         display: flex; 
     }
 
-    h1 {
+    span {
         font-size: 200%;
+        font-weight: 700;
     }
 
     img {
@@ -337,6 +344,10 @@ nav {
     }
     ol, ul {
         padding-left: 3em;
+
+        li {
+            margin: 0.5em 0;
+        }
     }
 
     img {
