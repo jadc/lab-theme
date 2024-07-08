@@ -16,7 +16,7 @@
             <main>
                 <header id="main-header">
                     {{ block "header" . }}
-                        <h5>{{ .Section | title }}</h5>
+                        <h5>{{ .Title | title }}</h5>
                     {{ end }}
                 </header>
                 {{ block "main" . }}{{ end }}
