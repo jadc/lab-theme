@@ -1,7 +1,8 @@
 {{ define "header" }}
     {{ partial "back.html" . }}
     <h5>{{ .Title | title }}</h5>
-    <h6>{{ .Section | title }}{{ if not .Params.hide_date }} - {{ .Date.Format .Site.Params.dateFormat }}{{ end }}</h6>
+    {{ $format := .Site.Params.dateFormat }}
+    <h6>{{ .Section | title }}{{ with .Date }} - {{ .Format $format }}{{ end }}</h6>
 {{ end }}
 {{ define "main" }}
     {{ partial "slideshow.html" . }}
