@@ -247,11 +247,12 @@ nav {
         flex-direction: column;
 
         header h2 {
-            margin-bottom: 0.5em;
+            margin-bottom: 0.25em;
         }
 
         .post-summary {
             flex-grow: 1;
+            text-align: justify;
         }
 
         .post-footer {
