@@ -246,6 +246,10 @@ nav {
         display: flex;
         flex-direction: column;
 
+        header h2 {
+            margin-bottom: 0.5em;
+        }
+
         .post-summary {
             flex-grow: 1;
         }
@@ -386,6 +390,20 @@ figure {
     justify-content: center;
     align-items: center;
     gap: 1em;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em;
+    margin: 0.5em 0;
+
+    span {
+        padding: 0.25em 0.5em;
+        border-radius: var(--border-radius);
+        background-color: var(--background-2);
+        text-transform: capitalize;
+    }
 }
 
 /* Mobile */

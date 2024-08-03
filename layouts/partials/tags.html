@@ -1,0 +1,5 @@
+{{ with . }}
+    <div class="tags">
+        {{ range . }}<span>{{ . | title }}</span>{{ end }}
+    </div>
+{{ end }}

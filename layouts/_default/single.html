@@ -4,6 +4,7 @@
 
     {{ $format := .Site.Params.dateFormat }}
     <h6>{{ .Section | title }}{{ with .Date }} - {{ .Format $format }}{{ end }}</h6>
+    {{ partial "tags.html" .Params.tags }}
 {{ end }}
 {{ define "main" }}
     {{ partial "slideshow.html" . }}
