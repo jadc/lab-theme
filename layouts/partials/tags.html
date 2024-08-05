@@ -1,5 +1,6 @@
 {{ with . }}
+    {{ $sorted := sort . }}
     <div class="tags">
-        {{ range . }}<span>{{ . | title }}</span>{{ end }}
+        {{ range $sorted }}<span>{{ . | title }}</span>{{ end }}
     </div>
 {{ end }}
