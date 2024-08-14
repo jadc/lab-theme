@@ -2,7 +2,7 @@
     <div class="nav-content">
         <div class="nav-header">
             <button onClick="document.querySelector('.nav-buttons').classList.toggle('nav-visible');"></button>
-            {{ partial "logo.html" . }}
+            {{ partialCached "logo.html" . }}
         </div>
 
         {{ $current := trim .RelPermalink "/" }}
