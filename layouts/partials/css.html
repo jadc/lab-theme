@@ -1,8 +1,5 @@
-{{ with resources.GetMatch "*.*css" }}
+{{ range sort (resources.Match "*.*css") ".Name" }}
     {{ with . | minify | fingerprint }}
         <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
     {{ end }}
-{{ end }}
-{{ range .Site.Params.customCSS }}
-    <link rel="stylesheet" href="/{{ . }}">
 {{ end }}

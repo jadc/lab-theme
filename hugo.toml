@@ -12,9 +12,6 @@ title = "My New Hugo Site"
     summaryLength = 20
     dateFormat = "Jan 2, 2006"
 
-    customCSS = []
-    customJS = []
-
 # Navigation Bar Links
 [[menus.nav]]
 name = "Home"
