@@ -1,6 +1,6 @@
 {{ range sort (resources.Match "*.js") ".Name" }}
     {{ $opts := dict "minify" true }}
-    {{ with . | js.Build $opts | fingerprint }}
+    {{ with . | js.Build $opts | minify | fingerprint }}
         <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
     {{ end }}
 {{ end }}
