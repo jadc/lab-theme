@@ -55,9 +55,6 @@ main {
     max-width: var(--page-width);
     background-color: var(--background);
 
-    /* Space before footer */
-    margin-bottom: 10em;
-    
     a {
         color: var(--primary);
         font-weight: 600;
@@ -103,7 +100,8 @@ footer {
     color: var(--secondary-text);
 
     padding: 2em;
-    
+    margin-top: 10em;
+
     #footer-content {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
