@@ -404,6 +404,13 @@ figure {
     }
 }
 
+code {
+    font-family: monospace !important;
+    background-color: var(--background-2);
+    border-radius: var(--border-radius);
+    padding: 0.25em 0.5em;
+}
+
 /* Mobile */
 @media screen and (max-width: 800px) {
     nav {
