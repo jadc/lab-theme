@@ -399,7 +399,7 @@ figure {
     span {
         padding: 0.25em 0.5em;
         border-radius: var(--border-radius);
-        background-color: var(--background-2);
+        background-color: rgba(0.75, 0.75, 0.75, 0.10);
         text-transform: capitalize;
     }
 }
